@@ -1,25 +1,56 @@
+@font-face {
+    src: url('../fonts/NunitoSans-Regular.ttf');
+    font-family: "Nunito Sans";
+}
+
 .body {
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
-    font-family: Nunito Sans, Arial, sans serif;
+    font-family: "Nunito Sans", Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
 }
-
 @media screen and (max-width: 1300px) {
-    .header-div-nav, .section-4-div-1, .section-5, .section-6-div-img2, .section-6-div-img3, footer {
-        display: none;
+    nav, .header-button, .section-1-button span, .section-4-div-1, .section-5, .section-6-div-img2, .section-6-div-img3, footer {
+    display: none;
     }
-    .section-1-div {
-        padding: 0px;
-        align-items: center;
+    .header-div {
+        justify-content: space-between;
     }
-    .section-1-div>h1 {
-        font-size: 23px;
+    .header-div__tel {
+        text-decoration: none !important; /*не могу изменить стиль текста*/
+        color: #FFFFFF !important; /*не могу изменить цвет текста*/
     }
-    .section-1-div>p {
-        font-size: 14px;
+    .header-div__logo {
+        font-size: 11px;
+        line-height: 15px;
+    }
+    .section-1-div { /*без !important не могу изменить стили*/
+        margin-left: 18px !important;
+    }
+    .section-1-div__h { /*без !important не могу изменить стили*/
+        font-size: 23px !important;
+        line-height: normal !important;
+        max-width: 340px !important;
+        margin-top: 85px !important;
+    }
+    .section-1-div__p { /*без !important не могу изменить стили*/
+        font-size: 14px !important;
+        line-height: normal !important;
+        max-width: 324px !important;
+    }
+    .section-1-button {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 61px !important;
+        /*без !important не могу изменить стили*/
+    }
+    .section-1-button__1, .section-1-button__2 {
+        width: 324px !important;
+        margin-top: 20px !important;
+        margin-bottom: 10px !important
+        /*без !important не могу изменить стили*/
     }
     .section-2-div-2, .section-3-form, .section-4-div-Repair {
         flex-direction: column;
@@ -41,7 +72,6 @@
         margin-top: 0px;
     }
 }
-
 .button {
     width: 200px;
     height: 51px;
@@ -56,7 +86,6 @@
     text-transform: uppercase;
     cursor: pointer;
 }
-
 .title {
     font-size: 27px;
     line-height: 37px;
@@ -71,27 +100,20 @@
     color: #E3B873;
 }
 .header {
-    height: 83px;
-    align-items: center;
     background-color: black;
     position: sticky;
-    top: 0;
-    background-image: url();
 }
-
 .header-div {
-    list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1250px;
+    max-width: 1256px;
     margin: 0 auto;
     padding: 25px;
+    text-transform: uppercase;
 }
 .header-div__logo {
     color: #E3B873;
 }
-
 nav {
     flex-grow: 1;
 }
@@ -100,19 +122,17 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    text-decoration: none;
-    color: white;
+    text-decoration: none !important; /*не могу изменить стиль текста*/
+    color: white !important; /*не могу изменить стиль текста*/
     font-size: 11px;
     line-height: 15px;
 }
-
+li:first-child {
+    color: #E3B873;
+}
 .header-div__tel {
-    font-style: normal;
-    font-weight: normal;
     font-size: 11px;
     line-height: 15px;
-    text-align: right;
     color: #E3B873;
     margin-left: 30px;
 }
@@ -129,46 +149,56 @@ nav {
 
 .section-1 {
     position: relative;
-    max-width: 100%;
-    max-height: 707px;
+    background-image: url(../images/image_43.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
 }
-
-.section-1_img_2 {
-    background: rgba(0, 0, 0, 0.2);
+.section-1:after {
     position: absolute;
+    content: '';
+    background-color: black;
+    width: 100%;
+    height: 100%;
     top: 0;
+    opacity: 0.7;
+    z-index: 1;
 }
 .section-1-div {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 0;
-    margin-top: 91px;
-    flex-basis: 100px;
-    padding: 100px 553px 1px 132px;
-    
+    max-width: 1256px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
 }
-.section-1-div>h1 {
+.section-1-div__h {
     font-size: 40px;
     line-height: 53px;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin: 0px;
+    margin-top: 194px;
+    margin-bottom: 11px;
+    max-width: 615px;
 }
-
-.section-1-div>h1>span {
+.section-1-div__h>span {
     color: #E3B873;
 }
-.section-1-div>p {
+.section-1-div__p {
     font-size: 22px;
     line-height: 36px;
     color: #FFFFFF;
+    max-width: 430px;
+}
+.section-1-button {
+    margin-top: -10px;
+    margin-bottom: 208px;
 }
 .section-1-button__1 {
     font-style: italic;
 }
 .section-1-button__2 {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.001);
     border: 1px solid #FFFFFF;
     font-style: italic;
 }
