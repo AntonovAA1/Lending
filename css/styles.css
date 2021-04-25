@@ -230,16 +230,6 @@ nav {
 .section-2-div-2__img_2 {
     color: rgba(255, 255, 255, 0.3);
 }
-.section-2-div-2__img::after {
-    color: #FFFFFF;
-    content: '\2192';
-    width: 15px;
-}
-.section-2-div-2__img::before {
-    color: #FFFFFF;
-    content: '\2190';
-    width: 35px;
-}
 .section-2-div-4__1 {
     margin-right: 130px;
 }
